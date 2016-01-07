@@ -1,7 +1,7 @@
 react-webpack-express-es6
 =====================
 
-Boilerplate to start developing npm react components with webpack. Originally created by (@mixxen)[https://github.com/mixxen], can be found (here)[https://github.com/mixxen/react-webpack-express].
+Boilerplate to start developing npm react components with webpack. Originally created by [@mixxen](https://github.com/mixxen), can be found [here](https://github.com/mixxen/react-webpack-express).
 
 
 Usage
