@@ -1,0 +1,1 @@
+webpackJsonp([2],[function(e,n,t){var r=t(58),a=r.createClass({displayName:"AnotherComponent",render:function(){return r.createElement("div",null,"Hello Again")}});r.render(r.createElement(a,null),document.getElementById("react-container"))}]);
