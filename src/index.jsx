@@ -4,6 +4,7 @@ import { Router, Route, IndexRoute } from 'react-router';
 import createHistory from 'history/lib/createHashHistory';
 
 import App from './components/App';
+import Home from './components/Home';
 
 ReactDOM.render(
 	<Router history={createHistory({ queryKey: false })} onUpdate={() => window.scrollTo(0, 0)}>

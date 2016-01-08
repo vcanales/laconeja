@@ -1,10 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+import Picture from './Picture';
+
 class Home extends React.Component {
     render() {
         return (
-        	<h1>Homepage</h1>
+        	<div>
+        		<Picture />
+        	</div>
+        	
 		);
     }
 }

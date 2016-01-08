@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import Menu from './Menu';
+import Header from './Header.jsx';
 
 class Home extends React.Component {
     render() {
         return (
         	<div>
-        		<Menu />
+        		<Header />
         		{this.props.children}
         	</div>
 		);
