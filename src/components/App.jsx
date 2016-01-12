@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import '../../public/css/main.css';
 
 import Header from './Header.jsx';
 

@@ -6,7 +6,7 @@ import Picture from './Picture';
 class Home extends React.Component {
     render() {
         return (
-        	<div>
+        	<div className="centered container">
         		<Picture />
         	</div>
         	
