@@ -25161,7 +25161,7 @@ webpackJsonp([0,1],[
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700,300italic,400italic,700italic);", ""]);
 	
 	// module
-	exports.push([module.id, "body{background-color:rgba(0,0,0,0.9);transition:all .8s;font-family:'Roboto Condensed',sans-serif;color:#FFEEDC}header{padding:60px 0}.container{display:flex;flex-direction:row}.container.centered{justify-content:center}", ""]);
+	exports.push([module.id, "body{background-color:rgba(0,0,0,0.9);transition:all .8s;font-family:'Roboto Condensed',sans-serif;color:#FFEEDC;font-weight:300}header{padding:60px 0}.container{display:flex;flex-direction:row}.container.centered{justify-content:center}", ""]);
 	
 	// exports
 
@@ -25850,7 +25850,8 @@ webpackJsonp([0,1],[
 			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Picture).call(this, props));
 	
 			_this.state = {
-				colors: []
+				colors: [],
+				carrots: 0
 			};
 			return _this;
 		}
@@ -25869,6 +25870,12 @@ webpackJsonp([0,1],[
 						dominantColor: dominantColor
 					});
 				}, 500);
+			}
+		}, {
+			key: 'addCarrot',
+			value: function addCarrot(e) {
+				this.setState({ carrots: this.state.carrots + 1 });
+				return false;
 			}
 		}, {
 			key: 'render',
@@ -25906,20 +25913,21 @@ webpackJsonp([0,1],[
 							)
 						),
 						_react2.default.createElement(
-							'div',
-							{ className: 'carrots' },
+							'button',
+							{ className: 'carrots colorize-font', onClick: this.addCarrot.bind(this) },
 							_react2.default.createElement('img', { src: '/img/carrot.svg' }),
 							_react2.default.createElement(
 								'span',
 								{ className: 'carrot count' },
-								'91'
+								' ',
+								this.state.carrots
 							)
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'date' },
-							'08/12/2016'
 						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'date' },
+						'08/12/2016'
 					)
 				);
 			}
@@ -25974,7 +25982,7 @@ webpackJsonp([0,1],[
 	
 	
 	// module
-	exports.push([module.id, "#coneja #imageContainer{box-shadow:0 0 20px 0 rgba(0,0,0,0.15)}#coneja #imageContainer img{height:500px;width:500px}#coneja #imageContainer #image{width:500px;height:500px}#coneja #imageContainer #colors{display:flex;flex-direction:row;flex-wrap:nowrap}#coneja #imageContainer #colors .colorDisplay{justify-content:center;width:100%;height:3px}#coneja .information .title{font-size:24px;text-transform:uppercase}", ""]);
+	exports.push([module.id, "#coneja #imageContainer{box-shadow:0 0 20px 0 rgba(0,0,0,0.15)}#coneja #imageContainer img{height:500px;width:500px}#coneja #imageContainer #image{width:500px;height:500px}#coneja #imageContainer #colors{display:flex;flex-direction:row;flex-wrap:nowrap}#coneja #imageContainer #colors .colorDisplay{justify-content:center;width:100%;height:3px}#coneja .information{display:flex;justify-content:space-between;align-items:center}#coneja .information .title{font-size:24px;text-transform:uppercase}#coneja .information .title>h4{margin:10px 0 0 0;font-weight:400}#coneja .information .carrots{cursor:pointer;background-color:transparent;font-size:13px;border:none;outline:none}#coneja .information .carrots:active{background-color:transparent;border:none;outline:none}#coneja .information .carrots>a{text-decoration:none}#coneja .information .carrots>img{margin-right:5px}#coneja .date{font-size:13px}", ""]);
 	
 	// exports
 

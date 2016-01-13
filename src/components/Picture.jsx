@@ -10,7 +10,8 @@ class Picture extends React.Component {
 	constructor(props) {
 	    super(props);
 	    this.state = {
-	        colors: []
+	        colors: [],
+	        carrots: 0
 	    };
 	}
 
@@ -29,8 +30,12 @@ class Picture extends React.Component {
     		);
 
     	},500);
-    	
     }
+
+    addCarrot(e) {
+    	this.setState({ carrots: this.state.carrots+1 });
+    	return false;
+	}
 
     render() {
     	let self = this;
@@ -52,15 +57,14 @@ class Picture extends React.Component {
 					<div className="title">
 						<h4>La Coneja</h4>
 					</div>
-					<div className="carrots">
+					<button className="carrots colorize-font" onClick={this.addCarrot.bind(this)}>
 						<img src="/img/carrot.svg" />
-						<span className="carrot count">91</span>
-					</div>
-					<div className="date">
-						08/12/2016
-					</div>
+						<span className="carrot count"> {this.state.carrots}</span>
+					</button>
 				</div>
-				
+				<div className="date">
+					08/12/2016
+				</div>
         	</div>
 		);
     }

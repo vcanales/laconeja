@@ -21,9 +21,37 @@
 		}
 	}
 	& .information {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		& .title {
+			&>h4 {
+				margin: 10px 0 0 0;	
+				font-weight: 400;
+			}
 			font-size: 24px;
 			text-transform: uppercase;
 		}
+		& .carrots {
+			cursor: pointer;
+			background-color: transparent;
+			font-size: 13px;
+			border: none;
+			outline: none;
+			&:active {
+				background-color: transparent;
+				border: none;
+				outline: none;
+			}
+			&>a {
+				text-decoration: none;
+			}
+			&>img { 
+				margin-right: 5px; 
+			}
+		}
+	}
+	& .date {
+		font-size: 13px;
 	}
 }
