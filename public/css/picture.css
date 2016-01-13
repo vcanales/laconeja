@@ -1,1 +1,1 @@
-#coneja>img{height:500px;width:500px}
+#coneja #imageContainer{box-shadow:0 0 20px 0 rgba(0,0,0,0.15)}#coneja #imageContainer img{height:500px;width:500px}#coneja #imageContainer #image{width:500px;height:500px}#coneja #imageContainer #colors{display:flex;flex-direction:row;flex-wrap:nowrap}#coneja #imageContainer #colors .colorDisplay{justify-content:center;width:100%;height:3px}#coneja .information .title{font-size:24px;text-transform:uppercase}
