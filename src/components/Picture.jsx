@@ -43,7 +43,7 @@ class Picture extends React.Component {
         	<div id="coneja">
 				<div id="imageContainer">
 					<div id="image">
-						<img id="conejaImage" src="/img/lita.png" alt="La Coneja" />
+						<img id="conejaImage" onDoubleClick={this.addCarrot.bind(this)} src="/img/conejofeo.jpg" alt="La Coneja" />
 					</div>
 					<div id="colors">
 						{this.state.colors.map(function(color,i) {
@@ -59,10 +59,10 @@ class Picture extends React.Component {
 					</div>
 					<button className="carrots colorize-font" onClick={this.addCarrot.bind(this)}>
 						<img src="/img/carrot.svg" />
-						<span className="carrot count"> {this.state.carrots}</span>
+						<span className="carrot count">{this.state.carrots}</span>
 					</button>
 				</div>
-				<div className="date">
+				<div className="date colorize-font">
 					08/12/2016
 				</div>
         	</div>

@@ -25890,7 +25890,7 @@ webpackJsonp([0,1],[
 						_react2.default.createElement(
 							'div',
 							{ id: 'image' },
-							_react2.default.createElement('img', { id: 'conejaImage', src: '/img/lita.png', alt: 'La Coneja' })
+							_react2.default.createElement('img', { id: 'conejaImage', onDoubleClick: this.addCarrot.bind(this), src: '/img/conejofeo.jpg', alt: 'La Coneja' })
 						),
 						_react2.default.createElement(
 							'div',
@@ -25919,14 +25919,13 @@ webpackJsonp([0,1],[
 							_react2.default.createElement(
 								'span',
 								{ className: 'carrot count' },
-								' ',
 								this.state.carrots
 							)
 						)
 					),
 					_react2.default.createElement(
 						'div',
-						{ className: 'date' },
+						{ className: 'date colorize-font' },
 						'08/12/2016'
 					)
 				);
