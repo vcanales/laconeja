@@ -6,9 +6,13 @@ var UserSchema = new Schema({
 	username: String,
 	password: String,
 	email: String,
-	isFacebook: boolean,
+	isFacebook: Boolean,
 	accessToken: String,
-	carrots: [ type: ObjectId, ref: 'Carrot' ],
+	carrots: [{ 
+		type: ObjectId, 
+		ref: 'Carrot' 
+	}],
+}, {
 	timestamps: {
 		createdAt: 'created',
 		updatedAt: 'modified'

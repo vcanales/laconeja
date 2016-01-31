@@ -3,10 +3,17 @@ var Schema 		= mongoose.Schema,
 	ObjectId	= Schema.ObjectId;
 
 var TagSchema = new Schema({
-	creator: { type: ObjectId, ref: 'User' },
+	creator: { 
+		type: ObjectId, 
+		ref: 'User' 
+	},
 	title: String,
 	description: String,
-	coneja: { type: ObjectId, ref: 'Coneja' },
+	coneja: { 
+		type: ObjectId, 
+		ref: 'Coneja' 
+	}
+}, {
 	timestamps: {
 		createdAt: 'created',
 		updatedAt: 'modified'

@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var Users = Require('../controllers/UsersController');
+var Users = require('../controllers/UsersController');
 mongoose.connect('mongodb://localhost/laconeja');
 
 /* GET home page. */
@@ -12,5 +12,7 @@ router.get('/', function(req, res) {
 /* User Routes */
 
 router.route('/user')
-	.get(Users.list);
+	.get(Users.index)
+	.put(Users.register);
+
 module.exports = router;

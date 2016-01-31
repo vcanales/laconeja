@@ -3,12 +3,22 @@ var Schema 		= mongoose.Schema,
 	ObjectId	= Schema.ObjectId;
 
 var ConejaSchema = new Schema({
-	creator: { type: ObjectId, ref: 'User' },
+	creator: { 
+		type: ObjectId, 
+		ref: 'User' 
+	},
 	title: String,
 	url: String,
 	description: String,
-	carrots: [ type: ObjectId, ref: 'Carrot' ],
-	tags: [ type: ObjectId, ref: 'Tag' ],
+	carrots: [ { 
+		type: ObjectId, 
+		ref: 'Carrot' 
+	} ],
+	tags: [{ 
+		type: ObjectId, 
+		ref: 'Tag' 
+	}]
+}, {
 	timestamps: {
 		createdAt: 'created',
 		updatedAt: 'modified'
