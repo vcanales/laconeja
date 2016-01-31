@@ -14,5 +14,8 @@ router.get('/', function(req, res) {
 router.route('/user')
 	.get(Users.index)
 	.put(Users.register);
+router.route('/user/:user_id')
+	.put(Users.update)
+	.get(Users.view);
 
 module.exports = router;

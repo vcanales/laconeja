@@ -4,7 +4,13 @@ import { Link } from 'react-router';
 class Home extends React.Component {
     render() {
         return (
-        	<h1>Menu</h1>
+        	<header>
+        		<ul>
+        			<li>
+        				<Link to="/signup">Sign Up</Link>
+        			</li>
+        		</ul>
+        	</hedaer>
 		);
     }
 }
