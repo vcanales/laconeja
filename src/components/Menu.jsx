@@ -1,18 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-class Home extends React.Component {
+import '../../public/css/menu.css';
+
+class Menu extends React.Component {
     render() {
         return (
-        	<header>
+        	<menu>
         		<ul>
+                    <li>
+                        <Link to="/login" className="colorize-font">
+                            <i className="fa fa-sign-in"></i> Sign In
+                        </Link>
+                    </li>
         			<li>
-        				<Link to="/signup">Sign Up</Link>
+        				<Link to="/signup" className="colorize-font">
+                            <i className="fa fa-user-plus"></i> Sign Up
+                        </Link>
+        			</li>
+        			<li>
+        				<Link to="/upload" className="colorize-font"><i className="fa fa-cloud-upload"></i> Upload your coneja</Link>
         			</li>
         		</ul>
-        	</hedaer>
+        	</menu>
 		);
     }
 }
 
-export default Home;
+export default Menu;

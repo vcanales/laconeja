@@ -22,7 +22,7 @@ exports.view = function(req,res) {
 exports.register = function(req,res) {
 	var user = new User();
 	var put = req.body;
-	
+
 	// set user attributes
 	user.username = put.username;
 	user.password = put.password;
@@ -31,8 +31,7 @@ exports.register = function(req,res) {
 
 	user.save(function(err) {
 		if (err) {
-			console.log(err);
-			return res.send(err);
+			return res.json({ status: 'error', error: err });
 		}
 		return res.json({ status: 'ok', data: user });
 	});
@@ -41,7 +40,7 @@ exports.update = function(req,res) {
 	var user_id = req.body.user_id;
 	User.findById(user_id,function(err, user) {
 		if (err) {
-			return res.send(err);
+			return res.json({ status: 'error', message: 'Could not update the user' });
 		}
 		return res.json({ status: 'ok', data: user });
 	});

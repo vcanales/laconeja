@@ -43,21 +43,28 @@ UserSchema.pre('save', function(callback) {
 		return callback();
 	}
 
-	// Password changed so we need to hash it
-	bcrypt.genSalt(5, function(err, salt) {
-		if (err) { 
-			return callback(err);
-		}
-
-		bcrypt.hash(user.password, salt, null, function(err, hash) {
-			if (err) {
-				return callback(err);
-			}
-			user.password = hash;
-			callback();
+	bcrypt.genSalt(5, function(err,salt) {
+			if (err) return callback(err);
+			bcrypt.hash(user.password, salt, null, function(err,hash) {
+				if (err) return callback(err);
+				user.password = hash;
+				callback();
+			});
 		});
-	});
 });
+
+// User model verify password
+UserSchema.methods.verifyPassword = function(password,cb) {
+	var self = this;
+	bcrypt.compare(password, self.password, function(err,isMatch) {
+		if (cb) {
+			if (err) { 
+				return cb(err);
+			}
+			return cb(null,isMatch);	
+		}
+	});
+};
 // Getter functions
 function toLowerCase(v) {
 	return v.toLowerCase();
