@@ -4,8 +4,10 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var session = require('express-session');
 var passport = require('passport');
-
+var authConfig = require('./controllers/AuthController');
+authConfig.passport(passport);
 var routes = require('./routes/index');
 
 var app = express();
@@ -18,9 +20,17 @@ app.use(favicon());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(passport.initialize());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session(
+    { 
+        secret: 'awoebvImfkUfenOf)fjenf20', 
+        resave: true, 
+        saveUninitialized: true 
+    }
+));
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use('/', routes);
 
@@ -38,6 +48,7 @@ app.use(function(req, res, next) {
 if (app.get('env') === 'development') {
     app.use(function(err, req, res, next) {
         res.status(err.status || 500);
+        console.log(err.message,err);
         res.render('error', {
             message: err.message,
             error: err

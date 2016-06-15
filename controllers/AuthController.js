@@ -11,7 +11,7 @@ exports.login = function(req,res,next) {
 		if (!user) {
 			return res.json({ status: 'error', message: 'User or password invalid' });
 		}
-		req.logIn(user,function(err,data) {
+		req.logIn(user,function(err) {
 			if (err) {
 				return res.json({ status: 'error', error: err });
 			}
@@ -23,8 +23,9 @@ exports.passport = function(passport) {
 	passport.serializeUser(function(user,callback) {
 		callback(null, user);
 	});
+
 	passport.deserializeUser(function(user, callback) {
-		User.findById(id, function(err, user) {
+		User.findById(user.id, function(err, user) {
 			if (err) {
 				return callback(err);
 			}
@@ -56,6 +57,7 @@ exports.passport = function(passport) {
 			});
 		}
 	));
-}
+	
+};
 
 

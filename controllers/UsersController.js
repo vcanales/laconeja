@@ -1,6 +1,7 @@
 var User = require('../models/User');
 
 exports.index = function(req,res) {
+	console.log(req.isAuthenticated());
 	User.find(function(err,users) {
 		if (err) {
 			return res.json({ status: 'error', error: err });

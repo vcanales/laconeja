@@ -5,7 +5,9 @@
   "dependencies": {
     "bcrypt": "^0.8.5",
     "bcrypt-nodejs": "0.0.3",
+    "burpee": "0.0.0",
     "ejs": "^2.3.4",
+    "express-session": "^1.13.0",
     "flux": "^2.0.1",
     "history": "^1.17.0",
     "kerberos": "0.0.18",
