@@ -1,0 +1,6 @@
+#logo {
+  text-align: center;
+}
+#logo * {
+  transition: all 0.5s;
+}

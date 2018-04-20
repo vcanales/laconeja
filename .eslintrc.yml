@@ -1,1 +1,11 @@
 extends: airbnb
+
+env:
+  browser: true
+  node: true
+
+globals:
+  ColorThief:  true
+  
+rules:
+  react/jsx-filename-extension: off
