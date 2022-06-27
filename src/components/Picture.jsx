@@ -43,7 +43,7 @@ class Picture extends React.Component {
         	<div id="coneja">
 				<div id="imageContainer">
 					<div id="image">
-						<img id="conejaImage" onDoubleClick={this.addCarrot.bind(this)} src="/img/conejofeo.jpg" alt="La Coneja" />
+						<img id="conejaImage" onDoubleClick={this.addCarrot.bind(this)} src="/img/lita.png" alt="La Coneja" />
 					</div>
 					<div id="colors">
 						{this.state.colors.map(function(color,i) {
